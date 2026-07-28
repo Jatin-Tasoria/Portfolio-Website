@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for Hexagon -->
+    <linearGradient id="hexBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021E19" />
+      <stop offset="50%" stop-color="#011411" />
+      <stop offset="100%" stop-color="#000A08" />
+    </linearGradient>
+
+    <!-- Glowing Border Gradient -->
+    <linearGradient id="hexBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Left side (J) Cyan-to-Green Gradient -->
+    <linearGradient id="jGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#34A853" />
+    </linearGradient>
+
+    <!-- Right side (T) Orange-to-Yellow Gradient -->
+    <linearGradient id="tGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#FACC15" />
+    </linearGradient>
+
+    <!-- Filters for Neon Glow Effect -->
+    <filter id="glowTeal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowOrange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Hexagon Frame -->
+  <polygon points="50,4 92,28.2 92,76.8 50,96 8,76.8 8,28.2" fill="url(#hexBg)" stroke="url(#hexBorder)" stroke-width="3" stroke-linejoin="round" />
+  
+  <!-- Outer Hexagon Subtle Inner Border -->
+  <polygon points="50,7.5 89,30 89,74 50,91.5 11,74 11,30" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1" />
+
+  <!-- LEFT SIDE: Stylized J (Cyan/Teal/Green) -->
+  <g filter="url(#glowTeal)">
+    <!-- Outer Track of J -->
+    <path d="M 45,22 L 20,36.5 L 20,70 L 45,84.5" fill="none" stroke="url(#jGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Hook of J (Inner track) -->
+    <path d="M 33,48 L 33,65 L 43,70 L 43,62" fill="none" stroke="url(#jGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Diagonal trace with node -->
+    <path d="M 23,55 L 35,46" fill="none" stroke="url(#jGradient)" stroke-width="3" stroke-linecap="round" />
+    <circle cx="35" cy="46" r="2" fill="#38BDF8" />
+    
+    <!-- Small isolated vertical trace -->
+    <path d="M 41,33 L 41,40" fill="none" stroke="url(#jGradient)" stroke-width="3" stroke-linecap="round" />
+    <circle cx="41" cy="40" r="2" fill="#34A853" />
+    
+    <circle cx="45" cy="22" r="2" fill="#38BDF8" />
+  </g>
+
+  <!-- RIGHT SIDE: Stylized T (Orange/Yellow) -->
+  <g filter="url(#glowOrange)">
+    <!-- Top & Outer Edge of T -->
+    <path d="M 55,22 L 80,36.5 L 80,45" fill="none" stroke="url(#tGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Stem of T -->
+    <path d="M 68,29.5 L 68,60" fill="none" stroke="url(#tGradient)" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Circuit lines branching from stem -->
+    <path d="M 68,40 L 76,45 L 76,55" fill="none" stroke="url(#tGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="76" cy="55" r="2" fill="#FACC15" />
+    
+    <path d="M 68,52 L 77,57 Q 77,65 68,70" fill="none" stroke="url(#tGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="68" cy="70" r="2" fill="#F97316" />
+    
+    <path d="M 68,60 L 59,65" fill="none" stroke="url(#tGradient)" stroke-width="3" stroke-linecap="round" />
+    <circle cx="59" cy="65" r="2" fill="#FACC15" />
+    
+    <circle cx="55" cy="22" r="2" fill="#F97316" />
+  </g>
+</svg>
