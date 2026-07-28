@@ -98,14 +98,4 @@ To run this project locally, clone this repository and follow the setup instruct
    npm run dev
    ```
 
----
 
-## 🌐 Public Sharing via ngrok
-
-To share your local development server with external users or test on mobile browsers:
-1. Expose the Vite server (port `5173`) using ngrok:
-   ```bash
-   ngrok http 5173
-   ```
-2. Vite is preconfigured (`vite.config.js`) to allow ngrok host headers (`.ngrok-free.app` and `.ngrok.io`).
-3. Click "Visit Site" on the ngrok warning screen to load your local build on any remote device.
