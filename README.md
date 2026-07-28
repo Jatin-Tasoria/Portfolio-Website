@@ -37,25 +37,25 @@ This repository contains a modern React frontend with interactive 3D elements an
 ## 📁 Repository Structure
 
 ```
-├── backend/                  # Node.js + Express backend
-│   ├── .env.example          # Template for backend secrets
-│   ├── server.js             # Express API & SMTP handling
-│   └── package.json          # Node dependencies
+├── backend/
+│   ├── .env.example
+│   ├── server.js
+│   └── package.json
 │
-├── src/                      # React Frontend Source
-│   ├── assets/               # Profile images and icons
-│   ├── components/           # Custom sections & widgets
-│   │   ├── ReactBits/        # Premium UI assets (SpotlightCard, DecayCard, etc.)
-│   │   ├── Hero.jsx          # Landing section with Tech Stack card
-│   │   ├── About.jsx         # Biography and Core Skills progress
-│   │   ├── TechStackCard.jsx # Centered AWS watermark info card
-│   │   ├── Projects.jsx      # Filterable portfolio items
-│   │   └── Contact.jsx       # Nodemailer-powered contact form
-│   ├── index.css             # Main styling & theme variables
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── ReactBits/
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── TechStackCard.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── index.css
 │   └── main.jsx
 │
-├── vite.config.js            # Vite configuration & api proxy
-└── package.json              # Frontend scripts & dependencies
+├── vite.config.js
+└── package.json
 ```
 
 ---
