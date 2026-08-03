@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf /var/www/mywebsite/*
-                cp -r ~/My\ Website/dist/* /var/www/mywebsite/
+                cp -r dist/* /var/www/mywebsite/
                 sudo systemctl reload nginx
                 '''
             }
