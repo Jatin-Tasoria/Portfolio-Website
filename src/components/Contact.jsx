@@ -45,7 +45,7 @@ export default function Contact() {
     setIsSubmitting(true);
     setErrors({});
 
-    const apiEndpoint = import.meta.env.VITE_API_URL;
+    const apiEndpoint = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api/contact' : '');
 
     // If no backend endpoint is configured in env, simulate local success
     if (!apiEndpoint) {
