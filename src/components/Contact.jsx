@@ -45,28 +45,14 @@ export default function Contact() {
     setIsSubmitting(true);
     setErrors({});
 
-    const apiEndpoint = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api/contact' : '');
-
-    // If no backend endpoint is configured in env, simulate local success
-    if (!apiEndpoint) {
-      console.log(
-        "No VITE_API_URL environment variable configured.\n" +
-        "Form submission simulated successfully. To connect your real backend,\n" +
-        "create a .env file and set: VITE_API_URL=https://your-api-endpoint"
-      );
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        setFormData({ name: '', email: '', message: '' });
-      }, 1000);
-      return;
-    }
+    // Use VITE_API_URL if provided, otherwise use the relative backend route
+    const apiEndpoint = import.meta.env.VITE_API_URL || "/api/contact";
 
     try {
       const response = await fetch(apiEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
